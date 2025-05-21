@@ -71,12 +71,13 @@ const Sidebar = () => {
       setIsOpen(false);
     }
   };
+  
 
   return (
     <>
       {/* Aside bar */}
       <aside
-        className={`fixed top-0 left-3 z-40 w-[264px] rounded-[18px] m-2 p-6 transition-transform duration-300
+        className={`fixed top-0 left-2 z-40 w-[264px] rounded-[18px] m-2 p-6 transition-transform duration-300
         ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
         style={{
           background:
@@ -84,6 +85,7 @@ const Sidebar = () => {
         }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
+        onClick={()=> setIsOpen(!isOpen)}
       >
         <section className="flex flex-col items-center">
           <div className="mt-4">
