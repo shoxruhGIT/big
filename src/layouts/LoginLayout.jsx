@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const LoginLayout = () => {
   return (
-    <div className="h-screen">
+    <div className="w-full h-screen overflow-hidden">
       <Navbar />
       <main className="flex justify-center items-center">
         <Outlet />

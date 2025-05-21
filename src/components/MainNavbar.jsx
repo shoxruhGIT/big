@@ -11,7 +11,7 @@ const MainNavbar = () => {
 
   return (
     <header className="w-full max-w-[1558px] m-auto px-4 md:pl-8">
-      <section className="py-4 flex flex-wrap items-center gap-3">
+      <section className="py-4 flex flex-col items-start xl:flex-row gap-3">
         {/* Title */}
         <div className="text-white md:w-[200px] w-full">
           <p className="text-sm text-[#718096]">
@@ -30,8 +30,8 @@ const MainNavbar = () => {
 
         {/* Navbar middle*/}
         <div className="w-full md:flex-1 order-3 md:order-none">
-          <div className="border-gradient rounded-[20px] w-full">
-            <div className="rounded-[18px] flex flex-col md:flex-row items-center justify-between p-2">
+          <div className="!rounded-[18px] header-gradient w-full">
+            <div className="!rounded-[18px] flex flex-col md:flex-row items-center justify-between  p-2">
               {/* Logo */}
               <img
                 src={Logo}
@@ -43,9 +43,9 @@ const MainNavbar = () => {
               <nav
                 className={`${
                   mobileMenuOpen ? "flex" : "hidden"
-                } md:flex w-full md:w-auto`}
+                } md:flex w-full items-center justify-center md:w-auto`}
               >
-                <ul className="flex flex-col md:flex-row items-center gap-4 md:gap-7 text-white">
+                <ul className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-7 text-white">
                   <li className="uppercase flex items-center gap-2 font-bold text-[10px] 2xl:text-xs">
                     <IoMdCube />
                     <a href="#">Get server</a>
@@ -66,7 +66,7 @@ const MainNavbar = () => {
               </nav>
 
               {/* Button */}
-              <button className="w-full md:w-[120px] 2xl:w-[150px] h-[35px] bg-[#0075FF] text-white uppercase rounded-xl text-[10px] 2xl:text-sm font-semibold">
+              <button className="w-full max-w-[100px] 2xl:max-w-[150px] h-[35px] cursor-pointer bg-[#0075FF] text-white uppercase rounded-xl text-[10px] 2xl:text-sm font-semibold mt-3 sm:mt-0">
                 New server
               </button>
             </div>

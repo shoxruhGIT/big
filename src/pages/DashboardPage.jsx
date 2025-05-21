@@ -82,8 +82,8 @@ const Dashboard = () => {
   ];
 
   return (
-    <main className="w-full max-w-[1600px] mx-auto px-4 xl:px-8 flex flex-col gap-10">
-      <div className="flex flex-col xl:flex-row gap-2">
+    <main className="w-full max-w-[1600px] mx-auto px-8 flex flex-col gap-10">
+      <div className="flex flex-col 2xl:flex-row gap-2">
         <BarChartUI />
 
         {/* Stats Cards */}
@@ -145,8 +145,8 @@ const Dashboard = () => {
                   <IoIosMore />
                 </button>
               </div>
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="flex flex-row md:flex-col gap-4">
+              <div className="flex flex-col 2xl:flex-row items-center justify-between gap-4">
+                <div className="flex flex-row 2xl:flex-col gap-4">
                   <div className="rounded-[18px] p-6 bg-gradient-to-br from-[#060C29] to-[#040C30]/[0.5]">
                     <h2 className="uppercase font-medium text-xs text-[#A0AEC0]">
                       Processor
@@ -361,7 +361,7 @@ const Dashboard = () => {
         </div>
       </section>
 
-      <footer className="w-full flex items-center justify-between pb-4">
+      <footer className="w-full flex flex-col sm:flex-row gap-2 items-center justify-between pb-4">
         <p className="text-sm font-medium text-white">@ Made with ❤</p>
         <nav className="flex items-center gap-10">
           <Link to="/" className="text-white text-sm font-normal uppercase">Big data</Link>

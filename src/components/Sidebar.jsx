@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Logo from "../assets/logo2.png";
 import { Link, NavLink } from "react-router-dom";
 import {
@@ -8,15 +8,11 @@ import {
   IoPerson,
   IoRocketSharp,
   IoStatsChart,
-  IoClose,
 } from "react-icons/io5";
-import { FiSidebar } from "react-icons/fi";
 import { BsFillCreditCardFill } from "react-icons/bs";
 import { FaFile } from "react-icons/fa6";
 
 const Sidebar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const navLinks = [
     {
       to: "/dashboard",
@@ -58,26 +54,36 @@ const Sidebar = () => {
     },
   ];
 
+  const [isOpen, setIsOpen] = useState(false);
+  const touchStartX = useRef(null);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - touchStartX.current;
+
+    if (!isOpen && diff > 80) {
+      setIsOpen(true);
+    } else if (isOpen && diff < -80) {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <>
-      {/* Toggle button for mobile */}
-      <button
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="md:hidden absolute top-2 right-10 z-50 p-2 rounded-xl text-white"
-      >
-        {mobileMenuOpen ? <IoClose size={24} /> : <FiSidebar size={24} />}
-      </button>
-
       {/* Aside bar */}
       <aside
         className={`fixed top-0 left-0 z-40 w-[264px] rounded-[18px] m-2 p-6 transition-transform duration-300
-        ${
-          mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0`}
+        ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
         style={{
           background:
             "linear-gradient(111.84deg, rgba(6, 11, 38, 0.94) 59.3%, rgba(26, 31, 55, 0) 100%)",
         }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
       >
         <section className="flex flex-col items-center">
           <div className="mt-4">
@@ -107,7 +113,7 @@ const Sidebar = () => {
                       isActive ? "bg-[#8f8f8f0a]" : ""
                     } hover-shadow-custom`
                   }
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => setIsOpen(false)}
                 >
                   {({ isActive }) => (
                     <>

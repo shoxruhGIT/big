@@ -417,7 +417,7 @@ const BillingPage = () => {
         </div>
       </section>
 
-      <footer className="w-full flex items-center justify-between pb-4">
+      <footer className="w-full flex flex-col sm:flex-row gap-2 items-center justify-between pb-4">
         <p className="text-sm font-medium text-white"> @ {new Date().getFullYear()}, Made with ❤</p>
         <nav className="flex items-center gap-10">
           <Link to="/" className="text-white text-sm font-normal uppercase">Big data</Link>
