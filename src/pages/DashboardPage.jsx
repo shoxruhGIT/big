@@ -82,7 +82,7 @@ const Dashboard = () => {
   ];
 
   return (
-    <main className="w-full max-w-[1600px] mx-auto px-8 flex flex-col gap-10">
+    <main className="w-full max-w-[1600px] mx-auto px-10 2xl:px-8 flex flex-col gap-10">
       <div className="flex flex-col 2xl:flex-row gap-2">
         <BarChartUI />
 

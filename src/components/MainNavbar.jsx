@@ -5,12 +5,14 @@ import Logo from "../assets/Logo.png";
 import { IoKeySharp, IoPerson, IoPersonCircleSharp } from "react-icons/io5";
 import { IoIosNotifications, IoMdCube, IoMdSettings } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
+import { FaFolder, FaWallet } from "react-icons/fa6";
 
 const MainNavbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full max-w-[1558px] m-auto px-4 md:pl-8">
+    <header className="w-full max-w-[1558px] m-auto px-4 pl-10">
       <section className="py-4 flex flex-col items-start xl:flex-row gap-3">
         {/* Title */}
         <div className="text-white md:w-[200px] w-full">
@@ -46,21 +48,21 @@ const MainNavbar = () => {
                 } md:flex w-full items-center justify-center md:w-auto`}
               >
                 <ul className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-7 text-white">
-                  <li className="uppercase flex items-center gap-2 font-bold text-[10px] 2xl:text-xs">
-                    <IoMdCube />
-                    <a href="#">Get server</a>
+                  <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
+                    <FaHome />
+                    <Link to="/home">Home</Link>
                   </li>
-                  <li className="uppercase flex items-center gap-2 font-bold text-[10px] 2xl:text-xs">
-                    <IoPerson />
-                    <a href="#">Wallet</a>
+                  <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
+                    <FaFolder />
+                    <Link to="/projects">Projects</Link>
                   </li>
-                  <li className="uppercase flex items-center gap-2 font-bold text-[10px] 2xl:text-xs">
+                  <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
+                    <FaWallet />
+                    <Link to="/wallet">Wallet</Link>
+                  </li>
+                  <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
                     <IoPersonCircleSharp />
-                    <a href="#">Cloud</a>
-                  </li>
-                  <li className="uppercase flex items-center gap-2 font-bold text-[10px] 2xl:text-xs">
-                    <IoKeySharp />
-                    <a href="#">Sign in</a>
+                    <Link to="/profile">Profile</Link>
                   </li>
                 </ul>
               </nav>
