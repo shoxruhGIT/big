@@ -10,6 +10,7 @@ import AppLayout from "./layouts/AppLayout";
 import Login from "./pages/LoginPage";
 import Dashboard from "./pages/DashboardPage";
 import BillingPage from "./pages/BillingPage";
+import ServerConfigurator from "./server/ServerConfigurator";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/billing" element={<BillingPage />} />
+          <Route path="/server-configure" element={<ServerConfigurator />} />
         </Route>
       </Routes>
     </Router>

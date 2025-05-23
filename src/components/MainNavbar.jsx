@@ -68,9 +68,9 @@ const MainNavbar = () => {
               </nav>
 
               {/* Button */}
-              <button className="w-full max-w-[100px] 2xl:max-w-[150px] h-[35px] cursor-pointer bg-[#0075FF] text-white uppercase rounded-xl text-[10px] 2xl:text-sm font-semibold mt-3 sm:mt-0">
+              <Link to="/server-configure" className="w-full max-w-[100px] 2xl:max-w-[150px] h-[35px] cursor-pointer bg-[#0075FF] text-white uppercase rounded-xl text-[10px] 2xl:text-sm font-semibold mt-3 sm:mt-0 flex items-center justify-center">
                 New server
-              </button>
+              </Link>
             </div>
           </div>
         </div>
