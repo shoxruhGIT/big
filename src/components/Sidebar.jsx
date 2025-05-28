@@ -11,12 +11,13 @@ import {
 } from "react-icons/io5";
 import { BsFillCreditCardFill } from "react-icons/bs";
 import { FaFile } from "react-icons/fa6";
+import { MdSpaceDashboard } from "react-icons/md";
 
 const Sidebar = () => {
   const navLinks = [
     {
       to: "/dashboard",
-      icon: <IoHome />,
+      icon: <MdSpaceDashboard />,
       label: "Dashboard",
     },
     {

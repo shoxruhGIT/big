@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginLayout from "./layouts/LoginLayout";
 import AppLayout from "./layouts/AppLayout";
 
@@ -11,6 +6,8 @@ import Login from "./pages/LoginPage";
 import Dashboard from "./pages/DashboardPage";
 import BillingPage from "./pages/BillingPage";
 import ServerConfigurator from "./server/ServerConfigurator";
+import HomePage from "./pages/HomePage";
+import HomeLayout from "./layouts/HomeLayout";
 
 function App() {
   return (
@@ -20,11 +17,15 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Route>
 
+        <Route element={<HomeLayout />}>
+          <Route path="/" element={<HomePage />} />
+        </Route>
+
         <Route element={<AppLayout />}>
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/billing" element={<BillingPage />} />
           <Route path="/server-configure" element={<ServerConfigurator />} />
+          <Route path="/server/$id" />
         </Route>
       </Routes>
     </Router>

@@ -83,7 +83,7 @@ const Dashboard = () => {
 
   return (
     <main className="w-full max-w-[1600px] mx-auto px-10 2xl:px-8 flex flex-col gap-10">
-      <div className="flex flex-col 2xl:flex-row gap-2">
+      <section className="flex flex-col 2xl:flex-row gap-2">
         <BarChartUI />
 
         {/* Stats Cards */}
@@ -171,7 +171,7 @@ const Dashboard = () => {
             </div>
           </div>
         </section>
-      </div>
+      </section>
 
       {/* Active Board & Backup */}
       <section className="flex flex-col xl:flex-row gap-6">
@@ -364,9 +364,15 @@ const Dashboard = () => {
       <footer className="w-full flex flex-col sm:flex-row gap-2 items-center justify-between pb-4">
         <p className="text-sm font-medium text-white">@ Made with ❤</p>
         <nav className="flex items-center gap-10">
-          <Link to="/" className="text-white text-sm font-normal uppercase">Big data</Link>
-          <Link to="/" className="text-white text-sm font-normal uppercase">Wallet</Link>
-          <Link to="/" className="text-white text-sm font-normal uppercase">License</Link>
+          <Link to="/" className="text-white text-sm font-normal uppercase">
+            Big data
+          </Link>
+          <Link to="/" className="text-white text-sm font-normal uppercase">
+            Wallet
+          </Link>
+          <Link to="/" className="text-white text-sm font-normal uppercase">
+            License
+          </Link>
         </nav>
       </footer>
     </main>

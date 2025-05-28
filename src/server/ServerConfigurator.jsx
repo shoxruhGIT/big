@@ -1,7 +1,7 @@
 import PriceBreakdown from "@/ui/price-breakdown";
 import ResourceSlider from "@/ui/resource-slider";
 import ServerInfo from "@/ui/server-info";
-import { calculatePrice, getServerCredentials } from "@/utils/serverUtils";
+import { getServerCredentials } from "@/utils/serverUtils";
 import { ArrowRight, Server } from "lucide-react";
 import React, { useState } from "react";
 
@@ -38,7 +38,7 @@ const ServerConfigurator = () => {
   const deleteServer = () => {
     // e.preventDefault();
     console.log("aa");
-    
+
     setIsLoading(true);
     setTimeout(() => {
       setServerInfo(null);
@@ -46,11 +46,11 @@ const ServerConfigurator = () => {
     }, 1500);
   };
 
-  const totalPrice = calculatePrice(resources);
+  //   const totalPrice = calculatePrice(resources);
 
   return (
-    <div className="w-full max-w-[1600px] mx-auto px-4 xl:px-8 flex flex-col gap-10 text-white ">
-      <div className="flex items-start gap-2">
+    <div className="w-full max-w-[1600px] mx-auto px-8 pl-0 md:pl-10 xl:px-8 flex flex-col md:items-start gap-10 text-white ">
+      <div className="flex flex-col md:flex-row  items-center md:items-start gap-2">
         <div
           className="w-full max-w-[500px] h-auto rounded-[18px]  "
           style={{
@@ -122,7 +122,11 @@ const ServerConfigurator = () => {
         </div>
       </div>
       {serverInfo && (
-        <ServerInfo serverInfo={serverInfo} isLoading={isLoading} deleteServer={deleteServer} />
+        <ServerInfo
+          serverInfo={serverInfo}
+          isLoading={isLoading}
+          deleteServer={deleteServer}
+        />
       )}
     </div>
   );
