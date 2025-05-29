@@ -39,7 +39,7 @@ const AuthNavbar = () => {
 
   return (
     <header
-      className={`w-full overflow-visible fixed z-50 transition-all duration-300 ${
+      className={`w-full overflow-visible fixed z-50 transition-all duration-300 px-4 ${
         scrolled ? "py-2" : "py-7"
       }`}
     >

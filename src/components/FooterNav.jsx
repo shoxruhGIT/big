@@ -34,18 +34,18 @@ const FooterNav = () => {
   ];
 
   return (
-    <footer
-      className="fixed w-full max-w-[1600px] mx-auto ml-40 z-50 h-15 flex items-center justify-center rounded-[18px] bottom-10 text-white py-10"
-      style={{
-        background:
-          "linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%)",
-      }}
-    >
-      <nav className="flex items-center gap-14">
+    <footer className="fixed w-full z-50 bottom-10 px-4">
+      <nav
+        className="max-w-[1600px] mx-auto rounded-[18px] grid grid-cols-2 sm:grid-cols-4 place-items-center py-3"
+        style={{
+          background:
+            "linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%)",
+        }}
+      >
         {footerNavLink.map((nav) => (
           <NavLink
             className={({ isActive }) =>
-              `w-[180px] h-[54px] flex px-4 items-center justify-center gap-3 text-sm font-medium text-white rounded-[18px] ${
+              `w-full max-w-[180px] h-[54px] flex px-4 items-center justify-center gap-3 text-sm font-medium text-white rounded-[18px] ${
                 isActive ? "bg-[#8f8f8f0a]" : ""
               } hover-shadow-custom`
             }
