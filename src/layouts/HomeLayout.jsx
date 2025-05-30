@@ -8,8 +8,8 @@ import FooterNav from "@/components/FooterNav";
 
 const HomeLayout = () => {
   return (
-    <div className="w-full h-screen overflow-hidden">
-      <Navbar />
+    <div className="w-full h-screen">
+      {/* <Navbar /> */}
       <FooterNav />
       <main className="flex justify-center items-center">
         <Outlet />

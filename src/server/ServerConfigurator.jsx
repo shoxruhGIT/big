@@ -120,14 +120,15 @@ const ServerConfigurator = () => {
             )}
           </button>
         </div>
-      </div>
-      {serverInfo && (
+        {serverInfo && (
         <ServerInfo
           serverInfo={serverInfo}
           isLoading={isLoading}
           deleteServer={deleteServer}
         />
       )}
+      </div>
+      
     </div>
   );
 };

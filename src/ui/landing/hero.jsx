@@ -53,20 +53,15 @@ const Hero = () => {
               className="
                 w-full
                 rounded-[102px]
-                py-[7px] pl-[18px] pr-20
+                py-[15px] pl-[18px] pr-20
                 xs:py-[9px] xs:pl-[22px] xs:pr-24
-                sm:py-[11px] sm:pl-[27px] sm:pr-28
-                md:py-[13px] md:pl-[36px] md:pr-32
+                
                 shadow-[0px_0px_25px_0px_rgba(0,0,0,0.05)]
                 border-none outline-none
                 font-syne font-bold
                 text-[15px] xs:text-[16px] sm:text-[18px] md:text-[20px]
                 leading-[22px] xs:leading-[24px] sm:leading-[26px] md:leading-[28px]
                 bg-gray-100 text-gray-700
-                placeholder:font-syne placeholder:font-bold
-                placeholder:text-[16px] xs:placeholder:text-[17px] sm:placeholder:text-[18px] md:placeholder:text-[20px]
-                placeholder:leading-[22px] xs:placeholder:leading-[24px] sm:placeholder:leading-[26px] md:placeholder:leading-[28px]
-                placeholder:tracking-[0.055em]
                 placeholder:uppercase
                 placeholder:text-black/25
                 placeholder:align-middle

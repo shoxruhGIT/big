@@ -8,7 +8,7 @@ const Stats = () => {
   }, []);
 
   return (
-    <section className="mt-20 px-4 sm:px-6 lg:px-16">
+    <section className="w-full max-w-[1488px] mx-auto mt-20 px-4 sm:px-6 lg:px-16">
       <div
         className="bg-white shadow-xl rounded-2xl p-6 sm:p-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
         data-aos="fade-up"
