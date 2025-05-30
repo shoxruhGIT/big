@@ -20,7 +20,7 @@ const MainNavbar = () => {
 
   return (
     <>
-      <header className="w-full max-w-[1558px] m-auto px-4 pl-10">
+      <header className="w-full max-w-[1558px] m-auto px-4">
         <section className="py-4 flex flex-col items-start xl:flex-row gap-3">
           {/* Title */}
           <div className="text-white md:w-[200px] w-full">
@@ -58,7 +58,7 @@ const MainNavbar = () => {
                   <ul className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-7 text-white">
                     <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
                       <FaHome />
-                      <Link to="/home">Home</Link>
+                      <Link to="/">Home</Link>
                     </li>
                     <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
                       <FaFolder />
