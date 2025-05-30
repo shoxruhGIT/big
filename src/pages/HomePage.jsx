@@ -13,7 +13,7 @@ const HomePage = () => {
     <div className="bg-white font-[Syne] text-black min-h-screen">
       <Header />
       <Hero />
-      <ServerFeatures />
+      {/* <ServerFeatures /> */}
       <ControlPanel />
       <BigDataStatus />
       <Characteristic />
