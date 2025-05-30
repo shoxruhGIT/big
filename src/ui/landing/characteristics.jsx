@@ -85,11 +85,8 @@ const Characteristic = () => {
             REALIBLE & QUICK SETUP
           </div>
           <div
-            className=" font-bold uppercase tracking-tight"
-            style={{
-              fontSize: "clamp(2.2rem, 7vw, 4.6rem)",
-              lineHeight: 1.02,
-            }}
+            className=" font-bold uppercase tracking-tight text-3xl md:text-6xl"
+            
           >
             CHARACTERISTIC
           </div>

@@ -47,7 +47,7 @@ export default function ServerFeatures() {
 
   return (
     <section
-      className="w-full pt-10 pb-10 md:pt-12 md:pb-12 xl:pt-16 xl:pb-48 bg-white relative overflow-x-hidden"
+      className="w-full pt-10 pb-10 md:pt-12 md:pb-12 xl:pt-16 xl:pb-20 bg-white relative overflow-x-hidden overflow-y-visible"
       style={{
         backgroundImage: `url(${serverBg})`,
         backgroundRepeat: "no-repeat",
@@ -56,7 +56,7 @@ export default function ServerFeatures() {
       }}
       data-aos="fade-up"
     >
-      <div className="mx-auto px-5" style={{ maxWidth: "1523px" }}>
+      <div className="mx-auto px-5 max-w-[1448px]">
         <div
           className="text-center xl:text-right xl:mb-8 md:mb-6 mb-4 relative z-10"
           data-aos="fade-down"
@@ -83,33 +83,15 @@ export default function ServerFeatures() {
         </div>
         <div
           className="
-          background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1.5px, transparent 1.5px);background-size: 20px 20px;
-          bg-white
-          shadow-[0px_0px_25px_0px_rgba(0,0,0,0.04)]
-          grid
-          grid-cols-1
-          md:grid-cols-2
-          xl:grid-cols-3
-          xl:gap-x-[74px] xl:gap-y-9
-          lg:gap-x-12 lg:gap-y-8
-          md:gap-x-10 md:gap-y-6
-          sm:gap-x-8 sm:gap-y-5
-          gap-y-4
-          w-full
-          relative
-          z-10
-          xl:pl-32 xl:pr-32
-          lg:pl-16 lg:pr-16
-          sm:pl-8 sm:pr-8
-          pl-4 pr-4
-          rounded-[40px]
-          pt-10
-          pb-10
-          md:pt-12
-          md:pb-12
-          xl:pt-16
-          xl:pb-48
-        "
+        bg-white shadow-[0px_0px_25px_0px_rgba(0,0,0,0.04)]
+        grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3
+        xl:gap-x-[74px] xl:gap-y-9 lg:gap-x-12 lg:gap-y-8
+        md:gap-x-10 md:gap-y-6 sm:gap-x-8 sm:gap-y-5 gap-y-4
+        w-full relative z-10
+        xl:px-32 lg:px-16 sm:px-8 px-4
+        rounded-[40px]
+        pt-10 pb-10 md:pt-12 md:pb-12 xl:pt-16
+      "
           data-aos="zoom-in-up"
         >
           {/* CPU */}

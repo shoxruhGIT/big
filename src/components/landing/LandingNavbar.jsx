@@ -33,18 +33,16 @@ const Header = () => {
   return (
     <header className="relative z-50 w-full bg-white py-5 lg:py-[28px]">
       <div
-        className="mx-auto flex justify-between items-center  px-5"
+        className="mx-auto flex flex-wrap justify-between items-center px-5"
         style={{ maxWidth: "1523px" }}
       >
-        {/* Logo, always links to home */}
         <NavLink
           to="/"
           className="font-bold text-lg lg:text-2xl tracking-widest flex items-center select-none"
         >
-          <img src={Logo} alt="logo" />
+          <img src={Logo} alt="logo" className="max-w-[120px] w-full h-auto" />
         </NavLink>
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-2 lg:gap-5">
+        <nav className="hidden md:flex gap-2 lg:gap-5 flex-wrap">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}
@@ -69,16 +67,14 @@ const Header = () => {
             </NavLink>
           ))}
         </nav>
-        {/* GET FREE 1 DAY Button */}
         <button
           className="cursor-pointer hidden md:block bg-black text-white font-medium text-sm lg:text-[20px] leading-5 lg:leading-[26px] tracking-[0.105em] uppercase text-center rounded-[43px] shadow transition
-				hover:bg-indigo-600 hover:text-white
-				active:bg-indigo-800 active:scale-95
-					focus:outline-none focus:ring-2 focus:ring-indigo-500 p-3 lg:p-5"
+        hover:bg-indigo-600 hover:text-white
+        active:bg-indigo-800 active:scale-95
+        focus:outline-none focus:ring-2 focus:ring-indigo-500 p-3 lg:p-5"
         >
           <Link to="/dashboard">GET FREE 1 DAY</Link>
         </button>
-        {/* Hamburger */}
         <button
           className="md:hidden flex items-center justify-center w-10 h-10 rounded focus:outline-none group"
           aria-label="Open navigation"
@@ -91,6 +87,7 @@ const Header = () => {
           </span>
         </button>
       </div>
+
       {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm transition-opacity duration-300 ${
@@ -100,6 +97,7 @@ const Header = () => {
         }`}
         onClick={() => setOpen(false)}
       ></div>
+
       {/* Mobile Menu Panel */}
       <nav
         className={`fixed top-0 right-0 w-4/5 max-w-xs h-full bg-white shadow-2xl z-50 transform transition-transform duration-300 ${
@@ -112,7 +110,11 @@ const Header = () => {
             className="font-bold text-lg tracking-widest flex items-center select-none"
             onClick={() => setOpen(false)}
           >
-           <img src={Logo} alt="logo" />
+            <img
+              src={Logo}
+              alt="logo"
+              className="max-w-[120px] w-full h-auto"
+            />
           </NavLink>
           <button
             className="w-10 h-10 flex items-center justify-center rounded group"
@@ -125,8 +127,8 @@ const Header = () => {
             </span>
           </button>
         </div>
-        <div className="flex flex-col gap-4 px-8 mt-10 ">
-          {navLinks.map((link, i) => (
+        <div className="flex flex-col gap-4 px-8 mt-10">
+          {navLinks.map((link) => (
             <NavLink
               key={link.name}
               to={link.href}
@@ -136,28 +138,25 @@ const Header = () => {
                   isActive ? "text-indigo-600" : "",
                 ].join(" ")
               }
-              
               onClick={() => setOpen(false)}
             >
               {link.name}
             </NavLink>
           ))}
         </div>
-        <div className="px-4 pb-10 mt-100">
-          <button
-            className="cursor-pointer bg-black text-white font-medium text-[20px] leading-[26px] tracking-[0.105em] uppercase text-center rounded-[43px] shadow transition hover:bg-indigo-600 hover:text-white active:bg-indigo-800 active:scale-95 focus:outline-none focus:ring-2 focus:ring-indigo-500 p-3 lg:p-5"
-          >
+        <div className="px-4 pb-10 mt-auto">
+          <button className="cursor-pointer bg-black text-white font-medium text-[20px] leading-[26px] tracking-[0.105em] uppercase text-center rounded-[43px] shadow transition hover:bg-indigo-600 hover:text-white active:bg-indigo-800 active:scale-95 focus:outline-none focus:ring-2 focus:ring-indigo-500 p-3 lg:p-5">
             <Link to="/dashboard">GET FREE 1 DAY</Link>
           </button>
         </div>
       </nav>
       <style>
         {`
-        @keyframes slideIn {
-          0% { opacity: 0; transform: translateX(40px);}
-          100% { opacity: 1; transform: translateX(0);}
-        }
-        `}
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateX(40px);}
+      100% { opacity: 1; transform: translateX(0);}
+    }
+    `}
       </style>
     </header>
   );
