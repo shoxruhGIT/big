@@ -106,16 +106,16 @@ const Header = () => {
           open ? "translate-x-0" : "translate-x-full"
         } flex flex-col`}
       >
-        <div className="flex items-center justify-between px-6 py-[28px]">
+        <div className="flex items-center gap-10 px-6 py-[28px]">
           <NavLink
             to="/"
             className="font-bold text-lg tracking-widest flex items-center select-none"
             onClick={() => setOpen(false)}
           >
-            BIGQB <span className="ml-1">🔒</span>
+           <img src={Logo} alt="logo" />
           </NavLink>
           <button
-            className="w-10 h-10 flex items-center justify-center rounded focus:outline-none group"
+            className="w-10 h-10 flex items-center justify-center rounded group"
             onClick={() => setOpen(false)}
             aria-label="Close navigation"
           >
@@ -136,25 +136,16 @@ const Header = () => {
                   isActive ? "text-indigo-600" : "",
                 ].join(" ")
               }
-              style={{
-                animation: open
-                  ? `slideIn 0.6s cubic-bezier(.23,1.1,.32,1) forwards ${
-                      0.08 * i + 0.08
-                    }s`
-                  : "none",
-              }}
+              
               onClick={() => setOpen(false)}
             >
               {link.name}
             </NavLink>
           ))}
         </div>
-        <div className="mt-auto px-8 pb-10">
+        <div className="px-4 pb-10 mt-100">
           <button
-            className="cursor-pointer bg-black text-white font-medium text-[20px] leading-[26px] tracking-[0.105em] uppercase text-center rounded-[43px] shadow transition
-    hover:bg-indigo-600 hover:text-white
-    active:bg-indigo-800 active:scale-95
-    focus:outline-none focus:ring-2 focus:ring-indigo-500 p-3 lg:p-5"
+            className="cursor-pointer bg-black text-white font-medium text-[20px] leading-[26px] tracking-[0.105em] uppercase text-center rounded-[43px] shadow transition hover:bg-indigo-600 hover:text-white active:bg-indigo-800 active:scale-95 focus:outline-none focus:ring-2 focus:ring-indigo-500 p-3 lg:p-5"
           >
             <Link to="/dashboard">GET FREE 1 DAY</Link>
           </button>
