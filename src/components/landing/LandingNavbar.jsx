@@ -156,7 +156,7 @@ const Header = () => {
     active:bg-indigo-800 active:scale-95
     focus:outline-none focus:ring-2 focus:ring-indigo-500 p-3 lg:p-5"
           >
-            GET FREE 1 DAY
+            <Link to="/dashboard">GET FREE 1 DAY</Link>
           </button>
         </div>
       </nav>
