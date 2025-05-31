@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../../assets/big_logo.png";
+import Logo from "../../assets/lock.png";
 
 const navLinks = [
-  { name: "SERVER", href: "/server" },
-  { name: "DOMAIN", href: "/domain" },
-  { name: "CLOUD", href: "/cloud" },
-  { name: "AI", href: "/ai" },
-  { name: "WALLET", href: "/wallet" },
+  { name: "SERVER", href: "/server-configure" },
+  { name: "DATA", href: "/dashboard" },
+  { name: "BILLING", href: "/billing" },
+  { name: "AI", href: "https://waiw.pro/chat" },
+  { name: "WALLET", href: "https://usdq.tech" },
 ];
 
 const Header = () => {
@@ -40,7 +40,8 @@ const Header = () => {
           to="/"
           className="font-bold text-lg lg:text-2xl tracking-widest flex items-center select-none"
         >
-          <img src={Logo} alt="logo" className="max-w-[120px] w-full h-auto" />
+          <span className="uppercase">BIGGB</span>
+          <img src={Logo} alt="logo" className="w-6 h-6" />
         </NavLink>
         <nav className="hidden md:flex gap-2 lg:gap-5 flex-wrap">
           {navLinks.map((link) => (
@@ -100,7 +101,7 @@ const Header = () => {
 
       {/* Mobile Menu Panel */}
       <nav
-        className={`fixed top-0 right-0 w-4/5 max-w-xs h-full bg-white shadow-2xl z-50 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 w-[60] max-w-xs h-full bg-white shadow-2xl z-50 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         } flex flex-col`}
       >
@@ -110,11 +111,8 @@ const Header = () => {
             className="font-bold text-lg tracking-widest flex items-center select-none"
             onClick={() => setOpen(false)}
           >
-            <img
-              src={Logo}
-              alt="logo"
-              className="max-w-[120px] w-full h-auto"
-            />
+            <span className="uppercase">BIGGB</span>
+            <img src={Logo} alt="logo" className="w-6 h-6" />
           </NavLink>
           <button
             className="w-10 h-10 flex items-center justify-center rounded group"

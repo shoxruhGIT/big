@@ -8,8 +8,9 @@ const AppLayout = () => {
     <div className="relative flex flex-col min-h-screen pb-50">
       <div className="absolute inset-0 bg-[url('./assets/bg2.jpg')] bg-cover bg-center -z-20" />
       <div className="absolute inset-0 bg-blue-500/10 backdrop-blur-3xl -z-10" />
+      <AsideBar />
       <FooterNav />
-      <main className="p-2 flex-1">
+      <main className="p-2 flex-1 ml-0 md:ml-60">
         <ScreenNavbar />
         <Outlet />
       </main>

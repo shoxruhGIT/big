@@ -36,7 +36,7 @@ const FooterNav = () => {
   return (
     <footer className="fixed w-full z-50 bottom-10 px-4">
       <nav
-        className="max-w-[1600px] mx-auto rounded-[18px] grid grid-cols-2 sm:grid-cols-4 place-items-center py-3"
+        className="max-w-[1600px] mx-auto rounded-[18px] grid grid-cols-4 place-items-center py-3"
         style={{
           background:
             "linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%)",
@@ -45,7 +45,7 @@ const FooterNav = () => {
         {footerNavLink.map((nav) => (
           <NavLink
             className={({ isActive }) =>
-              `w-full max-w-[180px] h-[54px] flex px-4 items-center justify-center gap-3 text-sm font-medium text-white rounded-[18px] ${
+              `w-full max-w-[180px] h-[54px] flex px-4 items-center justify-center gap-3 text-[10px] md:text-sm font-medium text-white rounded-[18px] ${
                 isActive ? "bg-[#8f8f8f0a]" : ""
               } hover-shadow-custom`
             }
@@ -54,7 +54,7 @@ const FooterNav = () => {
             {({ isActive }) => (
               <>
                 <div
-                  className={`w-[30px] h-[30px] rounded-xl flex items-center justify-center ${
+                  className={`w-[15px] md:w-[30px] h-[15px] md:h-[30px] rounded-xl flex items-center justify-center ${
                     isActive ? "bg-[#0075FF]" : "bg-[#1A1F37] text-[#0075FF]"
                   }`}
                 >

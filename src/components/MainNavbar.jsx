@@ -16,8 +16,6 @@ import { FaFolder, FaWallet } from "react-icons/fa6";
 const MainNavbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-
-
   return (
     <>
       <header className="w-full max-w-[1558px] m-auto px-4">

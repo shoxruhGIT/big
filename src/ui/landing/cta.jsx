@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CTA = () => (
   // CTA ni position absolute qilib, Footer parentini relative qilinadi
@@ -87,7 +88,7 @@ const CTA = () => (
                 borderRadius: "100px",
               }}
             >
-              CONFIGURATION
+              <Link to="/server-configure">CONFIGURATION</Link>
             </button>
           </div>
         </div>
