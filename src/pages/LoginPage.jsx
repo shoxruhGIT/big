@@ -4,7 +4,7 @@ const LoginPage = () => {
   const [isTrue, setIsTrue] = useState(false);
 
   return (
-    <div className="w-full max-w-[1600px] mx-auto flex flex-col md:flex-row justify-around items-center mt-20 md:mt-0">
+    <div className="w-full max-w-[1600px] mx-auto flex flex-col md:flex-row justify-around items-center">
       <div className="uppercase font-bold text-3xl md:text-4xl text-white flex flex-col items-center tracking-[8px] md:tracking-[12px]">
         <span>NEW</span>
         <span>FAST</span>
