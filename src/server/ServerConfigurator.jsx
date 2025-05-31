@@ -16,8 +16,6 @@ const ServerConfigurator = () => {
   const [serverInfo, setServerInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log(serverInfo);
-
   const handleResourceChange = (type, value) => {
     setResources((prev) => {
       const updated = { ...prev, [type]: value };
@@ -36,9 +34,6 @@ const ServerConfigurator = () => {
   };
 
   const deleteServer = () => {
-    // e.preventDefault();
-    console.log("aa");
-
     setIsLoading(true);
     setTimeout(() => {
       setServerInfo(null);
@@ -49,7 +44,7 @@ const ServerConfigurator = () => {
   //   const totalPrice = calculatePrice(resources);
 
   return (
-    <div className="w-full max-w-[1600px] mx-auto px-8 pl-0 md:pl-10 xl:px-8 flex flex-col md:items-start gap-10 text-white ">
+    <div className="w-full max-w-[1600px] mx-auto px-8 xl:px-8 flex flex-col md:items-start gap-10 text-white ">
       <div className="flex flex-col md:flex-row  items-center md:items-start gap-2">
         <div
           className="w-full max-w-[500px] h-auto rounded-[18px]  "
@@ -121,14 +116,13 @@ const ServerConfigurator = () => {
           </button>
         </div>
         {serverInfo && (
-        <ServerInfo
-          serverInfo={serverInfo}
-          isLoading={isLoading}
-          deleteServer={deleteServer}
-        />
-      )}
+          <ServerInfo
+            serverInfo={serverInfo}
+            isLoading={isLoading}
+            deleteServer={deleteServer}
+          />
+        )}
       </div>
-      
     </div>
   );
 };

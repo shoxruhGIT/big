@@ -8,6 +8,9 @@ import {
   IoPersonCircleSharp,
 } from "react-icons/io5";
 import { IoMdCube } from "react-icons/io";
+import { Link } from "react-router-dom";
+import { FaFolder, FaHome, FaWallet } from "react-icons/fa";
+import { Menu, X } from "lucide-react";
 
 const AuthNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,113 +41,64 @@ const AuthNavbar = () => {
   }, [menuOpen]);
 
   return (
-    <header
-      className={`w-full overflow-visible fixed z-50 transition-all duration-300 px-4 ${
-        scrolled ? "py-2" : "py-7"
-      }`}
-    >
-      <section className="navbar-container border-gradient max-w-[987.5px] h-[53px] mx-auto rounded-[20px]">
-        <div className="h-full w-full rounded-[18px] flex items-center justify-between px-5">
-          <div>
-            <img src={Logo} alt="AI BIG DATA" />
-          </div>
+    <header className="w-full max-w-[1558px] m-auto px-4">
+      <section className="py-4 flex flex-col items-start xl:flex-row gap-3">
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden absolute cursor-pointer right-5 top-5 text-white z-50"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-7 text-white">
-            <ul className="flex items-center gap-7 text-white">
-              <li className="uppercase flex items-center gap-2 font-bold text-xs hover:text-blue-400 transition-colors">
-                <span className="text-lg">
-                  <IoMdCube />
-                </span>
-                <a href="#">Get server</a>
-              </li>
-              <li className="uppercase flex items-center gap-2 font-bold text-xs hover:text-blue-400 transition-colors">
-                <span className="text-lg">
-                  <IoPerson />
-                </span>
-                <a href="#">Wallet</a>
-              </li>
-              <li className="uppercase flex items-center gap-2 font-bold text-xs hover:text-blue-400 transition-colors">
-                <span className="text-lg">
-                  <IoPersonCircleSharp />
-                </span>
-                <a href="#">Cloud</a>
-              </li>
-              <li className="uppercase flex items-center gap-2 font-bold text-xs hover:text-blue-400 transition-colors">
-                <span className="text-lg">
-                  <IoKeySharp />
-                </span>
-                <a href="#">Sign in</a>
-              </li>
-            </ul>
-          </nav>
+        {/* Navbar middle*/}
+        <div className="w-full md:flex-1 order-3 md:order-none">
+          <div className="!rounded-[18px] header-gradient w-full">
+            <div className="!rounded-[18px] flex flex-col md:flex-row items-center justify-between  p-2">
+              {/* Logo */}
+              <img
+                src={Logo}
+                alt="AI BIG DATA"
+                className="w-[120px] mb-4 md:mb-0 md:w-[80px] 2xl:w-[100px]"
+              />
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-white p-1"
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-            >
-              {menuOpen ? <IoClose size={24} /> : <IoMenu size={24} />}
-            </button>
-          </div>
+              {/* Nav links */}
+              <nav
+                className={`${
+                  menuOpen ? "flex" : "hidden"
+                } md:flex w-full items-center justify-center md:w-auto`}
+              >
+                <ul className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-7 text-white">
+                  <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
+                    <FaHome />
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
+                    <FaFolder />
+                    <Link to="/projects">Projects</Link>
+                  </li>
+                  <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
+                    <FaWallet />
+                    <Link to="/wallet">Wallet</Link>
+                  </li>
+                  <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
+                    <IoPersonCircleSharp />
+                    <Link to="/profile">Profile</Link>
+                  </li>
+                </ul>
+              </nav>
 
-          {/* New Server Button (Desktop) */}
-          <div className="hidden md:block">
-            <button className="w-[150px] h-[35px] bg-[#0075FF] hover:bg-blue-600 text-white uppercase rounded-xl text-sm font-semibold transition-colors">
-              New server
-            </button>
+              {/* Button */}
+              <Link
+                to="/server-configure"
+                className="w-full max-w-[100px] 2xl:max-w-[150px] h-[35px] cursor-pointer bg-[#0075FF] text-white uppercase rounded-xl text-[10px] 2xl:text-sm font-semibold mt-3 sm:mt-0 flex items-center justify-center"
+              >
+                New server
+              </Link>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Mobile Menu */}
-      <div
-        className={`mobile-menu ${menuOpen ? "open" : "closed"} p-5 shadow-lg`}
-      >
-        <nav className="text-white">
-          <ul className="flex flex-col gap-5">
-            <li className="uppercase flex items-center gap-3 font-bold text-sm hover:text-blue-400 transition-colors">
-              <span className="text-xl">
-                <IoMdCube />
-              </span>
-              <a href="#" className="block w-full">
-                Get server
-              </a>
-            </li>
-            <li className="uppercase flex items-center gap-3 font-bold text-sm hover:text-blue-400 transition-colors">
-              <span className="text-xl">
-                <IoPerson />
-              </span>
-              <a href="#" className="block w-full">
-                Wallet
-              </a>
-            </li>
-            <li className="uppercase flex items-center gap-3 font-bold text-sm hover:text-blue-400 transition-colors">
-              <span className="text-xl">
-                <IoPersonCircleSharp />
-              </span>
-              <a href="#" className="block w-full">
-                Cloud
-              </a>
-            </li>
-            <li className="uppercase flex items-center gap-3 font-bold text-sm hover:text-blue-400 transition-colors">
-              <span className="text-xl">
-                <IoKeySharp />
-              </span>
-              <a href="#" className="block w-full">
-                Sign in
-              </a>
-            </li>
-            <li className="mt-3">
-              <button className="w-full h-[40px] bg-[#0075FF] hover:bg-blue-600 text-white uppercase rounded-xl text-sm font-semibold transition-colors">
-                New server
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
     </header>
   );
 };

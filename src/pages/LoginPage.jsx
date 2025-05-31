@@ -4,24 +4,18 @@ const LoginPage = () => {
   const [isTrue, setIsTrue] = useState(false);
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen w-full">
-      <div className="relative w-full md:w-1/2 h-[30vh] md:h-screen bg-[url('./assets/bg.jpg')] bg-center bg-cover flex items-center justify-center p-8">
-        <div className="uppercase font-bold text-3xl md:text-4xl text-white flex flex-col items-center tracking-[8px] md:tracking-[12px]">
-          <span>NEW</span>
-          <span>FAST</span>
-          <span>STRONG</span>
-        </div>
+    <div className="w-full max-w-[1600px] mx-auto flex flex-col md:flex-row justify-around items-center mt-20 md:mt-0">
+      <div className="uppercase font-bold text-3xl md:text-4xl text-white flex flex-col items-center tracking-[8px] md:tracking-[12px]">
+        <span>NEW</span>
+        <span>FAST</span>
+        <span>STRONG</span>
       </div>
-      <div
-        className="w-full md:w-1/2 min-h-[70vh] md:h-screen flex items-center p-4 md:p-8 text-white"
-        style={{
-          background:
-            "linear-gradient(159.02deg, #0F123B 14.25%, #090D2E 56.45%, #020515 86.14%)",
-        }}
-      >
+      <div className="text-white">
         <div className="w-full max-w-[400px] mx-auto md:mx-24 space-y-6">
           <div className="mb-8">
-            <h1 className="font-semibold text-2xl md:text-3xl">Nice to see you</h1>
+            <h1 className="font-semibold text-2xl md:text-3xl">
+              Nice to see you
+            </h1>
             <p className="text-[#A0AEC0] text-sm">
               Enter your email and password to sign in
             </p>
@@ -87,7 +81,12 @@ const LoginPage = () => {
             Sign in
           </button>
 
-          <p className="text-center text-[#A0AEC0] text-sm">Don't have an account? <a className="text-bold text-white" href="#">Sign up</a></p>
+          <p className="text-center text-[#A0AEC0] text-sm">
+            Don't have an account?{" "}
+            <a className="text-bold text-white" href="#">
+              Sign up
+            </a>
+          </p>
         </div>
       </div>
     </div>

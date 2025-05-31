@@ -11,7 +11,7 @@ const HomeLayout = () => {
     <div className="w-full h-screen">
       {/* <Navbar /> */}
       <FooterNav />
-      <main className="flex justify-center items-center">
+      <main className="flex justify-center items-center ">
         <Outlet />
       </main>
     </div>
