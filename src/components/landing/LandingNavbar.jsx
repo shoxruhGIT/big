@@ -101,11 +101,11 @@ const Header = () => {
 
       {/* Mobile Menu Panel */}
       <nav
-        className={`fixed top-0 right-0 w-[60] max-w-xs h-full bg-white shadow-2xl z-50 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 w-4/5 max-w-xs h-full bg-white shadow-2xl z-50 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         } flex flex-col`}
       >
-        <div className="flex items-center gap-10 px-6 py-[28px]">
+        <div className="flex items-center gap-16 px-6 py-[28px]">
           <NavLink
             to="/"
             className="font-bold text-lg tracking-widest flex items-center select-none"
