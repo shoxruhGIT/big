@@ -72,7 +72,6 @@ const Sidebar = () => {
       setIsOpen(false);
     }
   };
-  
 
   return (
     <>
@@ -81,21 +80,20 @@ const Sidebar = () => {
         className={`fixed top-0 left-2 z-40 w-[264px] rounded-[18px] m-2 p-6 transition-transform duration-300
         ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
         style={{
-          background:
-            "linear-gradient(111.84deg, rgba(6, 11, 38, 0.94) 59.3%, rgba(26, 31, 55, 0) 100%)",
+          background: "linear-gradient(111.84deg, #060b26 59.3%, #1a1f37 100%)",
         }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
-        onClick={()=> setIsOpen(!isOpen)}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <section className="flex flex-col items-center">
-          <div className="mt-4">
-            <img src={Logo} alt="AI BIG DATA" />
+          <div className="">
+            <img src={Logo} alt="AI BIG DATA" className="w-22" />
           </div>
 
           {/* Divider */}
           <div
-            className="w-full mt-8"
+            className="w-full mt-4"
             style={{
               borderWidth: "1px",
               borderStyle: "solid",
@@ -105,14 +103,14 @@ const Sidebar = () => {
           ></div>
 
           {/* Nav Links */}
-          <div className="mt-6 w-full">
+          <div className="mt-4 w-full">
             <nav className="flex flex-col items-start gap-2">
               {navLinks.map(({ to, icon, label }) => (
                 <NavLink
                   key={to}
                   to={to}
                   className={({ isActive }) =>
-                    `w-full max-w-[219.5px] h-[54px] flex px-4 items-center gap-3 text-sm font-medium text-white rounded-[18px] ${
+                    `w-full max-w-[200px] h-[40px] flex px-4 items-center gap-3 text-xs font-medium text-white rounded-[18px] ${
                       isActive ? "bg-[#8f8f8f0a]" : ""
                     } hover-shadow-custom`
                   }
@@ -147,11 +145,11 @@ const Sidebar = () => {
                   key={to}
                   to={to}
                   className={({ isActive }) =>
-                    `w-full max-w-[219.5px] h-[54px] flex px-4 items-center gap-3 text-sm font-medium text-white rounded-[18px] ${
+                    `w-full max-w-[210px] h-[40px] flex px-4 items-center gap-3 text-xs font-medium text-white rounded-[18px] ${
                       isActive ? "bg-[#8f8f8f0a]" : ""
                     } hover-shadow-custom`
                   }
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => setIsOpen(false)}
                 >
                   {({ isActive }) => (
                     <>
@@ -170,26 +168,28 @@ const Sidebar = () => {
                 </NavLink>
               ))}
             </nav>
+          </div>
 
-            {/* Help card */}
-            <div className="w-full h-[169.5px] bg-[url('./assets/bg_need.png')] bg-cover bg-center mt-8 ml-0 md:ml-4 p-[18px]">
+          {/* Help card */}
+          <div className="w-full h-auto bg-[url('./assets/bg_need.png')] bg-cover bg-center mt-8 ml-0 md:ml-4 p-[18px]">
+            <div className="flex items-center justify-between">
               <div className="w-[35px] h-[35px] rounded-[12px] bg-white flex items-center justify-center">
                 <IoHelpCircle className="text-blue-500 w-[24px] h-[24px] rotate-180" />
               </div>
-              <div className="text-white mt-5">
+              <div className="text-white">
                 <p className="text-sm font-bold">Need help?</p>
                 <p className="text-sm font-normal">Please</p>
               </div>
-              <button
-                className="w-full h-[35px] rounded-[12px] mt-2.5 text-white uppercase text-[10px] font-bold cursor-pointer"
-                style={{
-                  background:
-                    "linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%)",
-                }}
-              >
-                Start chat
-              </button>
             </div>
+            <button
+              className="w-full h-[35px] rounded-[12px] mt-2.5 text-white uppercase text-[10px] font-bold cursor-pointer"
+              style={{
+                background:
+                  "linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%)",
+              }}
+            >
+              Start chat
+            </button>
           </div>
         </section>
       </aside>

@@ -5,7 +5,7 @@ import FooterNav from "@/components/FooterNav";
 
 const AppLayout = () => {
   return (
-    <div className="relative flex flex-col min-h-screen pb-50">
+    <div className="relative flex flex-col min-h-screen pb-30">
       <div className="absolute inset-0 bg-[url('./assets/bg2.jpg')] bg-cover bg-center -z-20" />
       <div className="absolute inset-0 bg-blue-500/10 backdrop-blur-3xl -z-10" />
       <AsideBar />
