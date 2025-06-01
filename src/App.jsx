@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import LoginLayout from "./layouts/LoginLayout";
 import AppLayout from "./layouts/AppLayout";
 
@@ -8,18 +13,19 @@ import BillingPage from "./pages/BillingPage";
 import ServerConfigurator from "./server/ServerConfigurator";
 import HomePage from "./pages/HomePage";
 import HomeLayout from "./layouts/HomeLayout";
+import { useEffect } from "react";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Routes>
         <Route element={<LoginLayout />}>
           <Route path="/login" element={<Login />} />
         </Route>
-{/* 
+
         <Route element={<HomeLayout />}>
-        </Route> */}
           <Route path="/" element={<HomePage />} />
+        </Route>
 
         <Route element={<AppLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
@@ -30,6 +36,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;

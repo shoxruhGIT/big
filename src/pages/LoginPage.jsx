@@ -1,7 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const LoginPage = () => {
   const [isTrue, setIsTrue] = useState(false);
+
+  const inputRef = useRef();
+
+  useEffect(() => {
+    const input = inputRef.current;
+    if (!input) return;
+
+    const onFocus = () => {
+      setTimeout(() => {
+        input.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 300);
+    };
+
+    input.addEventListener("focus", onFocus);
+    return () => input.removeEventListener("focus", onFocus);
+  }, []);
 
   return (
     <div className="w-full max-w-[1600px] mx-auto flex flex-col md:flex-row justify-around items-center">

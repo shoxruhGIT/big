@@ -1,5 +1,5 @@
 import { Server } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsFillCreditCardFill } from "react-icons/bs";
 import { IoHome } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
@@ -33,8 +33,31 @@ const FooterNav = () => {
     },
   ];
 
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      // 200px dan keyin divni yashiramiz
+      if (scrollY > 2600) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <footer className="fixed w-full z-50 bottom-2 px-4">
+    <footer
+      className={`fixed w-full z-50 bottom-2 px-4 transition-transform duration-200 ease-in-out ${
+        isHidden ? "opacity-0 pointer-events-none" : "opacity-100"
+      }`}
+    >
       <nav
         className="max-w-[1600px] mx-auto rounded-[18px] grid grid-cols-4 place-items-center py-3"
         style={{
