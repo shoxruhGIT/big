@@ -190,3 +190,17 @@ body {
 .mobile-menu.closed {
   transform: scaleY(0);
 }
+
+.linear-text {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(
+    97.89deg,
+    #ffffff 70.67%,
+    rgba(117, 122, 140, 0) 108.55%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}

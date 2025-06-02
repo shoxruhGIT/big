@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./AuthNavbar";
 import { Menu, Search, Server, X } from "lucide-react";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/Logo.svg";
 import {
   IoHome,
   IoKeySharp,
@@ -45,11 +45,15 @@ const MainNavbar = () => {
             <div className="!rounded-[18px] header-gradient w-full">
               <div className="!rounded-[18px] flex flex-col md:flex-row items-center justify-between  p-2">
                 {/* Logo */}
-                <img
+                {/* <img
                   src={Logo}
                   alt="AI BIG DATA"
                   className="w-[120px] mb-4 md:mb-0 md:w-[80px] 2xl:w-[100px]"
-                />
+                /> */}
+
+                <h1 className="text-sm linear-text" >
+                  AI BIG DATA
+                </h1>
 
                 {/* Nav links */}
                 <nav
@@ -57,20 +61,20 @@ const MainNavbar = () => {
                     mobileMenuOpen ? "flex" : "hidden"
                   } md:flex w-full items-center justify-center md:w-auto`}
                 >
-                  <ul className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-7 text-white">
-                    <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
+                  <ul className="flex flex-col md:flex-row items-center justify-center gap-4 text-white">
+                    <li className="uppercase flex items-center gap-1 font-bold text-[10px] lg:text-[12px] 2xl:text-xs">
                       <FaHome />
                       <Link to="/">Home</Link>
                     </li>
-                    <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
+                    <li className="uppercase flex items-center gap-1 font-bold text-[10px] lg:text-[12px] 2xl:text-xs">
                       <FaFolder />
                       <Link to="/projects">Projects</Link>
                     </li>
-                    <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
+                    <li className="uppercase flex items-center gap-1 font-bold text-[10px] lg:text-[12px] 2xl:text-xs">
                       <FaWallet />
                       <Link to="/wallet">Wallet</Link>
                     </li>
-                    <li className="uppercase flex items-center gap-2 font-bold text-[12px] 2xl:text-xs">
+                    <li className="uppercase flex items-center gap-1 font-bold text-[10px] lg:text-[12px] 2xl:text-xs">
                       <IoPersonCircleSharp />
                       <Link to="/profile">Profile</Link>
                     </li>

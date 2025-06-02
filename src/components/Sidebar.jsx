@@ -88,7 +88,7 @@ const Sidebar = () => {
       >
         <section className="flex flex-col items-center">
           <div className="">
-            <img src={Logo} alt="AI BIG DATA" className="w-22" />
+            <h1 className="linear-text uppercase">big data ai</h1>
           </div>
 
           {/* Divider */}

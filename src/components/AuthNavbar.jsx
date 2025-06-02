@@ -56,11 +56,7 @@ const AuthNavbar = () => {
           <div className="!rounded-[18px] header-gradient w-full">
             <div className="!rounded-[18px] flex flex-col md:flex-row items-center justify-between  p-2">
               {/* Logo */}
-              <img
-                src={Logo}
-                alt="AI BIG DATA"
-                className="w-[120px] mb-4 md:mb-0 md:w-[80px] 2xl:w-[100px]"
-              />
+             <h1 className="uppercase linear-text">AI BIG DATA</h1>
 
               {/* Nav links */}
               <nav
