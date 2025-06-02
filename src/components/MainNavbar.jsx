@@ -9,12 +9,16 @@ import {
   IoPersonCircleSharp,
 } from "react-icons/io5";
 import { IoIosNotifications, IoMdCube, IoMdSettings } from "react-icons/io";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { FaFolder, FaWallet } from "react-icons/fa6";
 
 const MainNavbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const { pathname } = useLocation();
+
+  let pathName = pathname.slice(1).charAt(0).toUpperCase() + pathname.slice(2);
 
   return (
     <>
@@ -25,7 +29,7 @@ const MainNavbar = () => {
             <p className="text-sm text-[#718096]">
               My servers / <span className="text-white">Analytics</span>
             </p>
-            <h3 className="text-sm font-semibold">Dashboard</h3>
+            <h3 className="text-sm font-semibold">{pathName}</h3>
           </div>
 
           {/* Mobile menu button */}

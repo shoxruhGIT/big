@@ -10,7 +10,7 @@ const AppLayout = () => {
       <div className="absolute inset-0 bg-blue-500/10 backdrop-blur-3xl -z-10" />
       <AsideBar />
       <FooterNav />
-      <main className="p-2 flex-1 ml-0 md:ml-60">
+      <main className="p-2 flex-1 ml-0 md:ml-60 pl-5 sm:pl-10">
         <ScreenNavbar />
         <Outlet />
       </main>

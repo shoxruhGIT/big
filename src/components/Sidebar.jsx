@@ -77,7 +77,7 @@ const Sidebar = () => {
     <>
       {/* Aside bar */}
       <aside
-        className={`fixed top-0 left-2 z-40 w-[264px] rounded-[18px] m-2 p-6 transition-transform duration-300
+        className={`fixed top-0 left-2 z-40 w-[264px] h-auto rounded-[18px] m-2 p-6 transition-transform duration-300
         ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
         style={{
           background: "linear-gradient(111.84deg, #060b26 59.3%, #1a1f37 100%)",
