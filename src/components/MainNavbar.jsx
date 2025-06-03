@@ -107,16 +107,16 @@ const MainNavbar = () => {
 
             {/* Icons */}
             <div className="flex items-center gap-4 text-[#718096]">
-              <Link to="/login" className="flex items-center gap-1">
+              {/* <Link to="/login" className="flex items-center gap-1">
                 <IoPerson />
                 <p className="text-xs font-normal">Sign In</p>
-              </Link>
-              <Link to="/setting">
+              </Link> */}
+              {/* <Link to="/setting">
                 <IoMdSettings />
               </Link>
               <Link to="/notification">
                 <IoIosNotifications />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </section>
